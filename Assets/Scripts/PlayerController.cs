@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _jumpForce = 5f;
     [SerializeField] private float _aimSpeed = 5f;
     [SerializeField] private GameObject _rockPrefab;
-    [SerializeField] private float _rockThrowForce;
+    
 
     [Range(-180, 180)]
     [SerializeField] private float _minYAim;
@@ -30,6 +31,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private UnityEvent<int> _onRocksStockChanged;
 
     [SerializeField] private RockPicker _rockPicker;
+
+    [Header("Shooting")]
+    [SerializeField] private float _maxHoldTime = 1f;
+    [Tooltip("Rock throw force when the player holds the shoot button for the maximum time")]
+    [SerializeField] private float _rockThrowForce;
 
     //The half height of the player's collider
     private float _halfHeight;
@@ -81,11 +87,30 @@ public class PlayerController : MonoBehaviour
         _rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
     }
 
-    private void OnShoot()
+    private void OnShoot(InputValue inputValue)
+    {
+        if(inputValue.isPressed)
+        {
+            OnShootHoldStart();
+            return;
+        }
+        OnShootHoldEnd();
+    }
+
+    private DateTime _startHoldTime;
+    private void OnShootHoldStart()
+    {       
+        if (RocksStock <= 0) return;
+        _startHoldTime = DateTime.Now;
+    }
+
+    private void OnShootHoldEnd()
     {
         if (RocksStock <= 0) return;
+        float holdTime = Mathf.Clamp((float)(DateTime.Now-_startHoldTime).TotalSeconds, 0, _maxHoldTime);
+        float holdPercentage=holdTime / _maxHoldTime;
         GameObject rock = Instantiate(_rockPrefab, transform.position + _cam.transform.forward, Quaternion.identity);
-        rock.GetComponent<Rigidbody>().AddForce(_cam.transform.forward * _rockThrowForce, ForceMode.Impulse);
+        rock.GetComponent<Rigidbody>().AddForce(_cam.transform.forward * _rockThrowForce*holdPercentage, ForceMode.Impulse);
         RocksStock--;
     }
 

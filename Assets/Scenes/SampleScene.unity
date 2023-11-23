@@ -612,7 +612,7 @@ GameObject:
   - component: {fileID: 158162177}
   - component: {fileID: 158162176}
   - component: {fileID: 158162175}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -628,8 +628,8 @@ Transform:
   m_GameObject: {fileID: 158162173}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.4251, y: -43.8178, z: -42.7}
-  m_LocalScale: {x: 64.903694, y: 64.96904, z: 1}
+  m_LocalPosition: {x: 51.3723, y: -43.8178, z: -42.7}
+  m_LocalScale: {x: 96.79671, y: 64.96904, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1468954292}
@@ -715,7 +715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 254279435}
   - component: {fileID: 254279436}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SpawnerElement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -731,7 +731,7 @@ Transform:
   m_GameObject: {fileID: 254279434}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.1, y: 43.8, z: -93.1}
+  m_LocalPosition: {x: 33.1, y: -18.2, z: -113.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -844,7 +844,7 @@ GameObject:
   - component: {fileID: 291467571}
   - component: {fileID: 291467570}
   - component: {fileID: 291467569}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1243,7 +1243,7 @@ GameObject:
   - component: {fileID: 539984087}
   - component: {fileID: 539984086}
   - component: {fileID: 539984085}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1259,8 +1259,8 @@ Transform:
   m_GameObject: {fileID: 539984083}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 67.9, y: -58.3318, z: -0.737}
-  m_LocalScale: {x: 84.31276, y: 35.938175, z: 1}
+  m_LocalPosition: {x: 99.8059, y: -58.3318, z: -0.737}
+  m_LocalScale: {x: 84.31276, y: 35.938175, z: 1.4913898}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1468954292}
@@ -1540,7 +1540,7 @@ GameObject:
   - component: {fileID: 710297652}
   - component: {fileID: 710297651}
   - component: {fileID: 710297650}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1556,8 +1556,8 @@ Transform:
   m_GameObject: {fileID: 710297648}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.4251, y: -43.8178, z: 41}
-  m_LocalScale: {x: 64.903694, y: 64.96904, z: 1}
+  m_LocalPosition: {x: 51.3723, y: -43.8178, z: 41}
+  m_LocalScale: {x: 96.79671, y: 64.96904, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1468954292}
@@ -1786,7 +1786,7 @@ GameObject:
   - component: {fileID: 848464206}
   - component: {fileID: 848464208}
   - component: {fileID: 848464207}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2190,7 +2190,7 @@ GameObject:
   - component: {fileID: 1238106587}
   - component: {fileID: 1238106586}
   - component: {fileID: 1238106589}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2532,7 +2532,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1468954292}
   - component: {fileID: 1468954293}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RomainsSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2572,7 +2572,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 73.755, y: 110.275, z: 53.975}
+  m_Extents: {x: 105.53, y: 110.275, z: 53.975}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
@@ -2878,7 +2878,7 @@ GameObject:
   - component: {fileID: 1842600259}
   - component: {fileID: 1842600258}
   - component: {fileID: 1842600257}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2983,7 +2983,7 @@ GameObject:
   - component: {fileID: 1865560401}
   - component: {fileID: 1865560400}
   - component: {fileID: 1865560399}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3305,6 +3305,10 @@ PrefabInstance:
     - target: {fileID: 7778591157217789495, guid: 7a8eb25c852392b4ba1c8a073771c1fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8328916129022202092, guid: 7a8eb25c852392b4ba1c8a073771c1fa, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2147112527126490442, guid: 7a8eb25c852392b4ba1c8a073771c1fa, type: 3}
