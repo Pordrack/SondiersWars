@@ -208,11 +208,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c819c02ca64a6c4bb244ac03fe5e3d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  Waypoints: []
   _agent: {fileID: 113220005476622847}
+  _despawnTime: 10
+  _animator: {fileID: 1594880618569414064}
+  _minWalkTime: 20
+  _maxWalkTime: 30
+  _minStopTime: 0
+  _maxStopTime: 10
 --- !u!95 &1594880618569414064
 Animator:
   serializedVersion: 5

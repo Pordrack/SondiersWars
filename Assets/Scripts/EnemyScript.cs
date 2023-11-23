@@ -8,12 +8,19 @@ public class EnemyScript : MonoBehaviour
     public Transform[] Waypoints;
     [SerializeField] private NavMeshAgent _agent;
     [SerializeField] private float _despawnTime = 10f;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private float _minWalkTime = 20;
+    [SerializeField] private float _maxWalkTime = 30;
+    [SerializeField] private float _minStopTime = 0;
+    [SerializeField] private float _maxStopTime = 10;
     private int _currentWaypoint = 0;
+    private Coroutine _walkAndStopCoroutine;
 
     private void Start()
     {
         GoToNextWaypoints();
         DisableRagdoll();
+        _walkAndStopCoroutine = StartCoroutine(WalkAndStopCoroutine());
     }
 
     public void OnWaypointEnter(Transform waypoint)
@@ -24,7 +31,26 @@ public class EnemyScript : MonoBehaviour
 
     private void GoToNextWaypoints()
     {
-        _currentWaypoint = (_currentWaypoint + 1) % Waypoints.Length;
+        int oldWaypoint=_currentWaypoint;
+
+        while (_currentWaypoint == oldWaypoint)
+        {
+            _currentWaypoint = Random.Range(0, Waypoints.Length);
+        }
+
+        StartWalking();
+    }
+
+    private void StopWalking()
+    {
+        _animator.SetBool("Headbanging", true);
+        _agent.destination = transform.position;
+
+    }
+
+    private void StartWalking()
+    {
+        _animator.SetBool("Headbanging", false);
         _agent.destination = Waypoints[_currentWaypoint].position;
     }
 
@@ -61,6 +87,7 @@ public class EnemyScript : MonoBehaviour
 
     public void Die()
     {
+        StopCoroutine(_walkAndStopCoroutine);
         StartCoroutine(DeathCoroutine());
     }
 
@@ -75,5 +102,16 @@ public class EnemyScript : MonoBehaviour
             col.enabled = false;
         }
         Destroy(this.gameObject,2);
+    }
+
+    private IEnumerator WalkAndStopCoroutine()
+    {
+        while(true)
+        {
+            StartWalking();
+            yield return new WaitForSeconds(Random.Range(_minWalkTime, _maxWalkTime));
+            StopWalking();
+            yield return new WaitForSeconds(Random.Range(_minStopTime,_maxStopTime));
+        }
     }
 }
