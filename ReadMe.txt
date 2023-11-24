@@ -11,3 +11,4 @@ Liste des features:
 	-Les Romains courent et s'arrête de temps et autre pour écouter du metal.
 	-Si ils entre en contact avec un caillou, ils meurent et tombe au sol.
 	-Il est possible de faire "spawner" des Romains en tirant un caillou sur le bouton de la machine à Romains.
+	-Les Romains ont été animés à la main dans Unity, en revanche le modèle à été fait en utilisant AvatarSDK sur une photo du Romain originel.
