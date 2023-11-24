@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class EnemyScript : MonoBehaviour
 {
@@ -13,6 +14,12 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] private float _maxWalkTime = 30;
     [SerializeField] private float _minStopTime = 0;
     [SerializeField] private float _maxStopTime = 10;
+
+    [Header("Events")]
+    [SerializeField] private UnityEvent _onDeath;
+    [SerializeField] private UnityEvent _onStopWalking;
+    [SerializeField] private UnityEvent _onStartWalking;
+
     private int _currentWaypoint = 0;
     private Coroutine _walkAndStopCoroutine;
 
@@ -44,6 +51,7 @@ public class EnemyScript : MonoBehaviour
     private void StopWalking()
     {
         _animator.SetBool("Headbanging", true);
+        _onStopWalking?.Invoke();
         _agent.destination = transform.position;
 
     }
@@ -51,6 +59,7 @@ public class EnemyScript : MonoBehaviour
     private void StartWalking()
     {
         _animator.SetBool("Headbanging", false);
+        _onStartWalking?.Invoke();
         _agent.destination = Waypoints[_currentWaypoint].position;
     }
 
@@ -94,6 +103,7 @@ public class EnemyScript : MonoBehaviour
     private IEnumerator DeathCoroutine()
     {
         EnableRagdoll();
+        _onDeath?.Invoke();
         yield return new WaitForSeconds(_despawnTime);
         //We clip through the ground before destroying ourselves
         var childColliders = GetComponentsInChildren<Collider>();

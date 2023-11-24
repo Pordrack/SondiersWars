@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8364991712815801808}
   - component: {fileID: 830786946079297106}
   - component: {fileID: 157714700035852537}
+  - component: {fileID: 9115091632272366433}
   m_Layer: 7
   m_Name: Rock
   m_TagString: Rock
@@ -133,3 +134,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &9115091632272366433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6068386190681445160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 781b574f83b91fb4fbeadcb5584b4411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _impactPrefab: {fileID: 3484867807629560230, guid: b2aad53678303f64c9e2e150d47b9660, type: 3}
+  _impactObjectLifetime: 1
