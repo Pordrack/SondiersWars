@@ -1,0 +1,13 @@
+Liste des features: 
+-Shaders:
+	-Un shader qui prend une couleur, la convertie en HSV, et fait varier la "Value" en fonction du temps, appliqué au bouton de la machine à Romains.
+	-Un shader qui fait "tourner" l'UV d'une texture, appliqué aux murs.
+-Le joueur: 
+	-Le joueur dispose de 1000 cailloux à l'effigie d'Hugo son, il peut les tirer avec clique gauche. Plus il maintient le clique (avec un cap à 1 seconde), plus le caillou est lancé fort.
+	-Une fois que le joueur n'a plus de cailloux, il ne peut plus en tirer.
+	-Le joueur peut ramasser des cailloux avec clique droit en les regardants. Si les cailloux sont entassés, il peut en ramasser
+	-Le joueur peut sauter tant qu'il à un sol sous les pieds. Les cailloux et les Romains ne sont pas le sol.
+-L'IA: 
+	-Les Romains courent et s'arrête de temps et autre pour écouter du metal.
+	-Si ils entre en contact avec un caillou, ils meurent et tombe au sol.
+	-Il est possible de faire "spawner" des Romains en tirant un caillou sur le bouton de la machine à Romains.
