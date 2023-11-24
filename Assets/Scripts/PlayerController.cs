@@ -63,22 +63,29 @@ public class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
     }
 
+    MyInputs inputs;
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         _halfHeight = GetComponent<Collider>().bounds.extents.y;
         _hitboxRadius = GetComponent<Collider>().bounds.extents.x;
         _onRocksStockChanged?.Invoke(_rocksStock);
+
+        inputs = new MyInputs();
+        inputs.Player.Enable();
+        inputs.Player.Move.performed += OnMove;
+        inputs.Player.Jump.performed += ctx => OnJump();
+        inputs.Player.Aim.performed += OnAim;
     }
 
-    private void OnAim(InputValue value)
+    private void OnAim(InputAction.CallbackContext value)
     {
-        _aimInput = value.Get<Vector2>();
+        _aimInput = value.ReadValue<Vector2>();
     }
 
-    private void OnMove(InputValue value)
+    private void OnMove(InputAction.CallbackContext value)
     {
-        _moveInput = value.Get<Vector2>();
+        _moveInput = value.ReadValue<Vector2>();
     }
 
     private void OnJump()

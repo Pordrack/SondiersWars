@@ -3088,6 +3088,54 @@ PrefabInstance:
       propertyPath: _pickPrompt
       value: 
       objectReference: {fileID: 143552932}
+    - target: {fileID: 2142333399759960213, guid: 321cf2b6e2426954c8a611536a7446b0, type: 3}
+      propertyPath: m_NotificationBehavior
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142333399759960213, guid: 321cf2b6e2426954c8a611536a7446b0, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142333399759960213, guid: 321cf2b6e2426954c8a611536a7446b0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionId
+      value: f76f0276-1ec2-4458-ade0-d9a1477711c8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142333399759960213, guid: 321cf2b6e2426954c8a611536a7446b0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
+      value: 84e41dde-c9a3-425b-b98f-44e7c060baa2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142333399759960213, guid: 321cf2b6e2426954c8a611536a7446b0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionId
+      value: 2fd22e44-7cd7-4ecf-bcf3-7b9af695891f
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142333399759960213, guid: 321cf2b6e2426954c8a611536a7446b0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionId
+      value: bd5ee815-1969-4212-8e3d-d9b7691284a6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142333399759960213, guid: 321cf2b6e2426954c8a611536a7446b0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionId
+      value: 72b702bf-75d2-480a-b4c3-88fe391122f7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142333399759960213, guid: 321cf2b6e2426954c8a611536a7446b0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionName
+      value: Player/Aim[/Mouse/delta]
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142333399759960213, guid: 321cf2b6e2426954c8a611536a7446b0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
+      value: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142333399759960213, guid: 321cf2b6e2426954c8a611536a7446b0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionName
+      value: Player/Shoot[/Mouse/leftButton]
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142333399759960213, guid: 321cf2b6e2426954c8a611536a7446b0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionName
+      value: Player/Jump[/Keyboard/space]
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142333399759960213, guid: 321cf2b6e2426954c8a611536a7446b0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionName
+      value: Player/Pick[/Mouse/rightButton]
+      objectReference: {fileID: 0}
     - target: {fileID: 2651822353190516743, guid: 321cf2b6e2426954c8a611536a7446b0, type: 3}
       propertyPath: m_Layer
       value: 8
