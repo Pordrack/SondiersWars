@@ -73,6 +73,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1594880618569414064, guid: 118907d5fc76dc743b1305d1e42b6532, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 8673d8f162bb3ff42b4b5a2df7456108, type: 3}
+    - target: {fileID: 1594880618569414064, guid: 118907d5fc76dc743b1305d1e42b6532, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -183,6 +187,22 @@ PrefabInstance:
     - target: {fileID: 3505930292193928337, guid: 118907d5fc76dc743b1305d1e42b6532, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505930292193928337, guid: 118907d5fc76dc743b1305d1e42b6532, type: 3}
+      propertyPath: _maxStopTime
+      value: 99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505930292193928337, guid: 118907d5fc76dc743b1305d1e42b6532, type: 3}
+      propertyPath: _maxWalkTime
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505930292193928337, guid: 118907d5fc76dc743b1305d1e42b6532, type: 3}
+      propertyPath: _minStopTime
+      value: 99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505930292193928337, guid: 118907d5fc76dc743b1305d1e42b6532, type: 3}
+      propertyPath: _minWalkTime
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3605464486790618943, guid: 118907d5fc76dc743b1305d1e42b6532, type: 3}
       propertyPath: m_Layer
